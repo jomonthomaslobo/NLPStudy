@@ -25,7 +25,11 @@ def process_content():
             chunkGram = r"""Chunk: {<RB.?>*<VB.?>*<NNP>+<NN>?}"""
             chunkParser = nltk.RegexpParser(chunkGram)
             chunked = chunkParser.parse(tagged)
-            chunked.draw()     
+            chunked.draw()   
+            print(chunked)
+            for subtree in chunked.subtrees(filter=lambda t: t.label() == 'Chunk'):
+                print(subtree)
+  
 
 
     except Exception as e:
