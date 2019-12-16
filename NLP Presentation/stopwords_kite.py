@@ -15,6 +15,7 @@ filtered_sentence = []
 for w in word_tokens:
     if w not in stop_words:
         filtered_sentence.append(w)
-
+print("sentence : -------")
 print(word_tokens)
+print("stopwords : -------")
 print(filtered_sentence)
