@@ -1,5 +1,6 @@
 #named entity recognition
 import nltk
+nltk.download('maxent_ne_chunker')
 from nltk.corpus import state_union
 from nltk.tokenize import PunktSentenceTokenizer
 
